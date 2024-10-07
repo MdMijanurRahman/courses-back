@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Load courses data
-const courses = JSON.parse(fs.readFileSync('courseDetails.json', 'utf-8'));
+const courses = JSON.parse(fs.readFileSync('./courseDetails.json', 'utf-8'));
 
 // API Endpoints
 app.get('/api/courses', (req, res) => {
