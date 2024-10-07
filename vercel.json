@@ -8,8 +8,12 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/api/courses"
+        "src": "/api/courses",
+        "dest": "/server.js"
+      },
+      {
+        "src": "/api/courses/(.*)",
+        "dest": "/server.js"
       }
     ]
   }
