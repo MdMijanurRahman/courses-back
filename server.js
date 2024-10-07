@@ -12,6 +12,9 @@ app.use(express.json());
 // Load courses data
 // const courses = JSON.parse(fs.readFileSync('./courseDetails.json', 'utf-8'));
 const courses = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'courseDetails.json'), 'utf-8'));
+
+console.log('__dirname:', __dirname);
+console.log('Resolved path:', path.join(__dirname, 'data', 'courseDetails.json'));
 // API Endpoints
 app.get('/api/courses', (req, res) => {
     res.json(courses);
